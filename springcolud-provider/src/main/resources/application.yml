@@ -1,0 +1,25 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8080/eureka
+mybatis:
+  config-locations: classpath:mapping/confg.xml
+  mapper-locations: classpath:mapping/mapper/*.xml
+  type-aliases-package: com.zs.dto
+server:
+  port: 8084
+spring:
+  application:
+    name: cloud-provider
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    password:
+    url: jdbc:mysql://localhost:3306/shujia?useUnicode=true&characterEncoding=utf-8
+    username: root
+  spring:
+    data:
+      elasticsearch:
+        repositories:
+          enabled: true
+        cluster-nodes: 127.0.0.1:9300
+        cluster-name: my-application

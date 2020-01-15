@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zs.dao.QueryDao" >
+
+<!--查询上海-->
+<select id="shcx" resultType="com.zs.dto.shangpin">
+   select * from shangpin where sprmenchengshi=1 order by spjiage desc LIMIT 0,6
+</select>
+
+<!--查询北京-->
+<select id="beijing" resultType="com.zs.dto.shangpin">
+    select * from shangpin where sprmenchengshi=2 order by spjiage desc LIMIT 0,6
+</select>
+
+<!--查询成都-->
+<select id="chengduchaxun" resultType="com.zs.dto.shangpin">
+    select * from shangpin where sprmenchengshi=3 order by spjiage desc LIMIT 0,6
+</select>
+
+<!--查询广州-->
+<select id="chaxuangz" resultType="com.zs.dto.shangpin">
+    select * from shangpin where sprmenchengshi=4 order by spjiage desc LIMIT 0,6
+</select>
+
+<!--查询杭州-->
+<select id="hangzong" resultType="com.zs.dto.shangpin">
+    select * from shangpin where sprmenchengshi=5 order by spjiage desc LIMIT 0,6
+</select>
+
+<!--查询深圳-->
+<select id="shenzhen" resultType="com.zs.dto.shangpin">
+    select * from shangpin where sprmenchengshi=6 order by spjiage desc LIMIT 0,6
+</select>
+
+</mapper>

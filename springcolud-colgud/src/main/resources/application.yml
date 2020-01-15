@@ -1,0 +1,14 @@
+eureka:
+  client:
+    eureka-server-connect-timeout-seconds: 8
+    eureka-server-read-timeout-seconds: 8
+    fetch-registry: false
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka
+  instance:
+    hostname: eureka
+  server:
+    enable-self-preservation: false
+server:
+  port: 8080
